@@ -1,1 +1,10 @@
 [vpn]
+www     vpn_ip=10.1.2.1  ansible_host=206.189.226.240
+katori  vpn_ip=10.1.2.2  ansible_host=142.93.115.26
+dragon  vpn_ip=10.1.2.3  ansible_host=192.168.55.200
+pocket2 vpn_ip=10.1.2.4  ansible_host=192.168.55.33
+smaug   vpn_ip=10.1.2.5  ansible_host=192.168.1.42
+mini    vpn_ip=10.1.2.6  ansible_host=192.168.1.19
+pine    vpn_ip=10.1.2.7  ansible_host=192.168.55.145
+eve     vpn_ip=10.1.2.8  ansible_host=192.168.55.240
+pi      vpn_ip=10.1.2.9  ansible_host=192.168.55.27
