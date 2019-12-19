@@ -8,3 +8,4 @@ mini    vpn_ip=10.1.2.6  ansible_host=192.168.1.19
 pine    vpn_ip=10.1.2.7  ansible_host=192.168.55.145
 eve     vpn_ip=10.1.2.8  ansible_host=192.168.55.240
 pi      vpn_ip=10.1.2.9  ansible_host=192.168.55.27
+fred    vpn_ip=10.1.2.10 ansible_host=192.168.1.80
