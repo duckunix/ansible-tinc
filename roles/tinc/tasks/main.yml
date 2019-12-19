@@ -123,3 +123,18 @@
   lineinfile: dest=/etc/hosts regexp='.*{{ item }}$' line="{{ hostvars[item].vpn_ip }} {{item}}" state=present
   when: hostvars[item].vpn_ip is defined
   with_items: "{{ play_hosts }}"
+
+- name: make systemd.resolved.conf.d
+  file: path=/etc/systemd/resolved.conf.d state=directory owner=root group=root mode='0755'
+  notify:
+    - restart resolved
+
+- name: update systemd-resoved.conf
+  copy: src=etc.systemd.resolved.conf dest=/etc/systemd/resolved.conf
+  notify:
+    - restart resolved
+
+- name: update systemd/resovled.conf.d/dns_servers.conf
+  copy: src=etc.systemd.resolved.conf.d.dns_servers.conf dest=/etc/systemd/resolved.conf.d/dns_servers.conf
+  notify:
+    - restart resolved
